@@ -1,0 +1,32 @@
+{% extends 'weather/home.html' %}
+
+{% block weathercontent %}
+	{% if success %}	
+		<p>Add another city?</p>
+	{% endif %}
+	<form action ="" method ="post">
+		{% csrf_token %}
+		<input id ="loc_city" name ="loc_city" type ="text" placeholder ="City zip code..."><br>
+		<input id ="city_name" name ="city_name" type ="text" placeholder ="City name..."><br>
+		<input type ="submit" value ="Add city">
+	</form>
+	
+	<p>
+	<a href ="http://openweathermap.org/help/city_list.txt" target="_blank">The names and zipcodes of some cities:</a><br><br>
+	5000598	Manchester	<br><br>
+	5128581	New York City<br><br>
+	2655138	Boston<br><br>
+	233725	Byakabanda	<br><br>
+	233738	Bweyogerere<br><br>
+	234578	Bugembe	<br><br>
+	235130	Apac	<br><br>
+	448227	Pader	<br><br>
+	448232	Margherita	<br><br>
+	4046255	Bay Minette	<br><br>
+	4046274	Edna	<br><br>
+	4046319	Bayou La Batre	<br><br>
+	4046332	Henderson	<br><br>
+	4047198	Brighton	<br><br>
+	<a href ="http://openweathermap.org/help/city_list.txt" target="_blank">For more information, please click here</a><br><br>
+	</p>
+{% endblock %}

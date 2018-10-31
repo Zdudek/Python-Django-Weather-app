@@ -1,0 +1,12 @@
+{% extends 'weather/home.html' %}
+
+
+{% block weathercontent %}
+
+	{%for element in listDict%}
+	<hr>
+		{% for key,value in element.items %}
+			<p>{{key}} - {{ value }}</p>
+		{% endfor %}
+	{% endfor %}
+{% endblock %}

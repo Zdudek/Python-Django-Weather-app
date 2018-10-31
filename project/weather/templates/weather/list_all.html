@@ -1,0 +1,12 @@
+{% extends 'weather/home.html' %}
+
+{% block weathercontent %}
+<p>List of all cities in our database:</P>
+	{% if query %}
+		{% for q in query %}
+			<p>{{q.city_name}}- {{q.loc_city}}</p>
+		{% endfor %}
+	{% else %}
+		<p>No query found</p>
+	{% endif %}
+{% endblock %}

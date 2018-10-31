@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+
+<link href = "{% static 'css/style.css' %}" rel ="stylesheet">
+</head>
+<body>
+<div id ="container">
+	<div id="banner">
+	</div>
+	<div>
+		<img src= "{% static "/images/banner.jpg" %}" alt="banner" height="150" width="960"> 
+		
+	</div>
+	<nav>
+
+		<ul>
+			<li><a href = "{% url 'home' %}">Home</a></li>
+			<li><a href = "{% url 'weather:home' %}">Weather</a></li>
+			<li><a href = "{% url 'weather:about' %}">About</a></li>			
+		</ul>
+	</nav>
+<section>
+<h3>{{data_time}}</h3>
+{% block contentweather %}
+
+{% endblock %}
+{% block content %}
+
+<h1>Most Popular Cities around us</h1>
+
+<article>
+<a href = "{% url 'weather:manchester' %}"><h2>Manchester</h2></a>
+<p>Manchester is the largest city in the U.S. state of New Hampshire, the tenth largest city in New England, and the largest city in northern New England, an area comprising the states of Maine, New Hampshire, and Vermont. It was first named by the merchant and inventor Samuel Blodget (after whom the Samuel Blodget Park in Manchester North is named). Blodget's vision was to create a great industrial center similar to that of the original Manchester in England, which was the world's first industrialized city.</p>
+
+</article>
+
+<article>
+<a href = "{% url 'weather:nyc' %}"><h2>New York City</h2></a>
+<p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</p>
+</article>
+
+<article>
+<a href = "{% url 'weather:boston' %}"><h2>Boston</h2></a>
+<p>Boston is Massachusetts’ capital and largest city. Founded in 1630, it’s one of the oldest cities in the U.S. The key role it played in the American Revolution is highlighted on the Freedom Trail, a 2.5-mile walking route of historic sites that tells the story of the nation’s founding. One stop, former meeting house Faneuil Hall, is a popular marketplace.</p>
+</article>
+{% endblock %}
+
+
+</section>
+<div id="footer">
+<h5> Created by "Zack" and "Tri Nguyen"  
+&copy; Copyright 2016 <a class="link" href="mailto:minhtri.ng@gmail.com" target="_top">minhtri.ng@gmail.com</a> and 
+<a class="link" href="mailto:zackdudek@gmail.com" target="_top">zackdudek@gmail.com</a>
+ build for COMP525 Final Project<!-- email and contact-->
+</h5>
+
+</div>
+</div> 
+</body>
+
+</html> 

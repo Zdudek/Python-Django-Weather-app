@@ -1,0 +1,31 @@
+body{
+	font-family: Verdaba, sans-serif;
+	font-size: 0.8 em;
+	background-color: #EEEEEE;
+}
+#container{
+	max-width:960px;
+	margin:0px auto;
+	background-color: #FFFFFF;
+}
+a{
+	text-decoration:none;
+}
+header, nav, section, article, footer,#banner{
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+}
+#banner {
+	text-transform: uppercase;
+	color:black;
+	background-color: #55AAFB;
+}
+nav ul{
+	margin 0px;
+	padding: 0px;
+}
+nav ul li {
+	display: inline;
+	margin: 5px;
+}
